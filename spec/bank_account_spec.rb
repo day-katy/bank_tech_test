@@ -14,7 +14,7 @@ describe BankAccount do
     end
 
     it 'starts with an empty array for the accumulated statement' do
-      expect(@account.acc_statement).to eq ['date || credit || debit || balance']
+      expect(@account.acc_statement).to eq []
     end
   end
 
@@ -23,18 +23,18 @@ describe BankAccount do
       @account.deposit("10/01/2012", 1000)
       @account.deposit("13/01/2012", 2000)
       @account.withdrawal("14/01/2012", 500)
-      expect(@account.print_statement).to eq ['date || credit || debit || balance', '14/01/2012 || || 500.00 || 2500.00', '10/01/2012 || 1000.00 || || 1000.00']
+      expect(@account.print_statement).to eq ['date || credit || debit || balance', '14/01/2012 || || 500.00 || 2500.00', '13/01/2012 || 2000.00 || || 3000.00', '10/01/2012 || 1000.00 || || 1000.00']
     end
 
     it 'gets the bank statement information from an array of a pushed deposit to bank statement' do
       @account.deposit("08/03/2021", 1000.00)
-      expect(@account.acc_statement).to eq ["date || credit || debit || balance", "08/03/2021 || 1000.00 || || 1000.00"]
+      expect(@account.acc_statement).to eq ["08/03/2021 || 1000.00 || || 1000.00"]
     end
 
     it 'gets the bank statement information from an array of a pushed withdrawal from bank statement' do
       @account.deposit("08/03/2021", 1000.00)
       @account.withdrawal("10/03/2021", 500.00)
-      expect(@account.acc_statement).to eq ["date || credit || debit || balance", "08/03/2021 || 1000.00 || || 1000.00", "10/03/2021 || || 500.00 || 500.00"]
+      expect(@account.acc_statement).to eq ["08/03/2021 || 1000.00 || || 1000.00", "10/03/2021 || || 500.00 || 500.00"]
     end
   end
 

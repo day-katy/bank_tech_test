@@ -6,11 +6,11 @@ class BankAccount
 
   def initialize(current_balance = 0)
     @current_balance = current_balance
-    @acc_statement = ['date || credit || debit || balance']
+    @acc_statement = []
   end
 
   def print_statement
-     @acc_statement
+     @acc_statement.reverse.unshift('date || credit || debit || balance')
   end
 
   def deposit (date, deposit_amount)
