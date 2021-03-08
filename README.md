@@ -98,3 +98,4 @@ I'll need:
 ## Edge Cases
 
 What happens when a bank account goes below 0? Is there an overdraft limit?
+What happens if a deposit or withdrawal is conducted in a different month? Different year?
