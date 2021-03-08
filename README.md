@@ -2,6 +2,13 @@
 
 This is a sample tech test provided by Makers Academy, completed during my tenth week of the bootcamp.
 
+To run this code, fork and clone this repository, then run
+
+```
+rspec --init
+bundle install
+```
+
 ## Specification
 
 ### Requirements

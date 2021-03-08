@@ -8,4 +8,8 @@ describe BankStatement do
     end
   end 
 
+  describe "#deposit" do
+
+  end
+
 end
