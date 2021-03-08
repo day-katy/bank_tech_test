@@ -23,9 +23,9 @@ describe BankAccount do
       @account.deposit('13/01/2012', 2000)
       @account.withdrawal('14/01/2012', 500)
       expect(@account.print_statement).to eq ['date || credit || debit || balance',
-                                                                        '14/01/2012 || || 500.00 || 2500.00', 
-                                                                        '13/01/2012 || 2000.00 || || 3000.00', 
-                                                                        '10/01/2012 || 1000.00 || || 1000.00']
+                                              '14/01/2012 || || 500.00 || 2500.00',
+                                              '13/01/2012 || 2000.00 || || 3000.00',
+                                              '10/01/2012 || 1000.00 || || 1000.00']
     end
 
     it 'gets the bank statement information from an array of a pushed deposit to bank statement' do
