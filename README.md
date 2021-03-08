@@ -85,6 +85,16 @@ date || credit || debit || balance
 12/03/2021 || || 1000.00 || 400.00
 ```
 
+## Planning
+
+I'll need:
+
+- a method for depositing money
+- a method for withdrawing money
+- a way of keeping track of what the current balance is
+- a way of keeping track of all of the transactions, to be printed out with the statement
+- a method for printing the full bank statement
+
 ## Edge Cases
 
 What happens when a bank account goes below 0? Is there an overdraft limit?
