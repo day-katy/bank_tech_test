@@ -5,7 +5,7 @@ require 'bank_account'
 describe BankAccount do
   describe '#print_statement' do
     it 'prints the date, credit, debit, and balance of a bank statement' do
-      expect(subject.print_statement).to eq 'date || credit || debit || balance'
+      expect(subject.print_statement).to eq 'date || credit || debit || balance\n 14/01/2012 || || 500.00 || 2500.00\n 10/01/2012 || 1000.00 || || 1000.00'
     end
   end
 
