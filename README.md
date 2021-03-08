@@ -114,13 +114,15 @@ date || credit || debit || balance
 
 ## Planning
 
-I'll need:
+In planning this project, I discerned that I would need:
 
 - a method for depositing money
 - a method for withdrawing money
 - a way of keeping track of what the current balance is
 - a way of keeping track of all of the transactions, to be printed out with the statement
 - a method for printing the full bank statement
+
+Using TDD as my guide, I approached this code as if I were trying to keep track of real-life finances. I would want to input the date and the amount of a deposit or withdrawal, and then when printing my statement I would want to know the dates of specific deposits and withdrawals, along with my overall balance. After testing and refactoring, I now have code that accomplishes the MVP of the specification, though not yet the edge cases.
 
 ## Edge Cases
 
