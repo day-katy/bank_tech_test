@@ -49,3 +49,26 @@ As a client who makes bank transactions,
 so I can keep track of my deposits,
 I want to see the total balance of my account after each deposit or withdrawal.
 ```
+
+Deposit
+Input || Output
+08/03/2021, 1000.00 || 08/03/2021, 1000.00
+09/03/2021, 500.00 || 09/03/2021, 1500.00
+10/03/2021, 00.00 || 10/03/2021, 1500.00
+
+Withdrawal (continuing from above bank account)
+Input || Output
+10/03/2021, 1000.00 || 10/03/2021, 500.00
+11/03/2021, 100.00 || 11/03/2021, 400.00
+
+Printed Bank Statement
+date || credit || debit || balance
+08/03/2021 || 1000.00 || || 1000.00
+09/03/2021 || 500.00 || || 1500.00
+10/03/2021 || 00.00 || || 1500.00
+11/03/2021 || || 1000.00 || 500.00
+12/03/2021 || || 1000.00 || 400.00
+
+## Edge Cases
+
+What happens when a bank account goes below 0? Is there an overdraft limit?
