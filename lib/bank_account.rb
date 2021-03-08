@@ -14,8 +14,8 @@ class BankAccount
   end
 
   def deposit (date, deposit_amount)
-    deposit = sprintf("%.2f", deposit_amount)
-    return "#{date}, #{deposit}"
+    updated_balance = sprintf("%.2f", (deposit_amount + @current_balance))
+    return "#{date}, #{updated_balance}"
   end
 
 end
