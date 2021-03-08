@@ -25,3 +25,27 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+
+## User Stories
+
+```
+As a client who has a bank account,
+to keep track of my transactions,
+I want to see the date, credit, debit and balance fields for each transaction.
+
+As a client who makes bank transactions,
+so I can keep track of my deposits and withdrawals,
+I want to see the date I make a deposit or withdrawal.
+
+As a client who makes bank transactions,
+so I can keep track of my deposits,
+I want to see the amount of deposit I am making.
+
+As a client who makes bank transactions,
+so I can keep track of my withdrawals,
+I want to see the amount of withdrawl I am making.
+
+As a client who makes bank transactions,
+so I can keep track of my deposits,
+I want to see the total balance of my account after each deposit or withdrawal.
+```
