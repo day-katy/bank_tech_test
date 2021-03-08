@@ -30,6 +30,8 @@ date || credit || debit || balance
 08/03/2021 || 1000.00 || || 1000.00
 ```
 
+To run the tests, run `rspec`
+
 ## Specification
 
 ### Requirements
@@ -55,6 +57,8 @@ date || credit || debit || balance
 ```
 
 ## User Stories
+
+I have created these user stories from the above specifications.
 
 ```
 As a client who has a bank account,
