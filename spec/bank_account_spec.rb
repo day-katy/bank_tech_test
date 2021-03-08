@@ -22,11 +22,17 @@ describe BankAccount do
     it 'prints the date, credit, debit, and balance of a bank statement' do
       expect(@account.print_statement).to eq 'date || credit || debit || balance\n 14/01/2012 || || 500.00 || 2500.00\n 10/01/2012 || 1000.00 || || 1000.00'
     end
+
+    it 'gets the bank statement information from an array of accumulated bank statements' do
+      @account.deposit("08/03/2021", 1000.00)
+      expect(@account.acc_statement).to eq ["08/03/2021 || 1000.00 || || 1000.00"]
+    end
   end
 
   describe '#deposit' do
     it 'adds the amount of the deposit to an empty bank account' do
-      expect(@account.deposit("08/03/2021", 1000.00)). to eq "08/03/2021, 1000.00"
+      @account.deposit("08/03/2021", 1000.00)
+      expect(@account.current_balance). to eq 1000.0
     end
 
     it 'adds the deposit amount to a positive current balance of a bank account' do

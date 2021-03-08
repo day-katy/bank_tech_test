@@ -16,7 +16,7 @@ class BankAccount
 
   def deposit (date, deposit_amount)
     @current_balance += deposit_amount 
-    "#{date}, #{sprintf("%.2f", @current_balance)}"
+    @acc_statement << "#{date} || #{sprintf("%.2f", deposit_amount)} || || #{sprintf("%.2f", @current_balance)}"
   end
 
   def withdrawal (date, withdrawal_amount)
