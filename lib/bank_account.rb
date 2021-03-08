@@ -10,7 +10,7 @@ class BankAccount
   end
 
   def print_statement
-   puts @acc_statement.reverse.unshift('date || credit || debit || balance')
+    @acc_statement.reverse.unshift('date || credit || debit || balance')
   end
 
   def deposit(date, deposit_amount)
