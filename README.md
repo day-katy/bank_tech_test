@@ -30,6 +30,8 @@ date || credit || debit || balance
 08/03/2021 || 1000.00 || || 1000.00
 ```
 
+![Image](https://github.com/day-katy/bank_tech_test/blob/main/images/bank_tech_test.png?raw=true)
+
 To run the tests, run `rspec`
 
 ## Specification
