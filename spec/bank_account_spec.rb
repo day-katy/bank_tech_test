@@ -13,7 +13,7 @@ describe BankAccount do
       expect(@account.current_balance).to eq 0
     end
 
-    it 'starts with an array of the labels for the accumulated statement' do
+    it 'starts with an empty array for the accumulated statement' do
       expect(@account.acc_statement).to eq ['date || credit || debit || balance']
     end
   end
