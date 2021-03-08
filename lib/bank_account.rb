@@ -4,8 +4,8 @@
 class BankAccount
   attr_accessor :current_balance
 
-  def initialize
-    @current_balance = 0
+  def initialize(current_balance = 0)
+    @current_balance = current_balance
   end
 
 
@@ -14,8 +14,8 @@ class BankAccount
   end
 
   def deposit (date, deposit_amount)
-    updated_balance = sprintf("%.2f", (deposit_amount + @current_balance))
-    return "#{date}, #{updated_balance}"
+    @current_balance += deposit_amount 
+    "#{date}, #{sprintf("%.2f", @current_balance)}"
   end
 
 end

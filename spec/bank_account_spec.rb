@@ -15,8 +15,15 @@ describe BankAccount do
   end
 
   describe '#deposit' do
-    it 'adds the amount of the deposit to the entire amount in the bank account' do
+    it 'adds the amount of the deposit to an empty bank account' do
       expect(subject.deposit("08/03/2021", 1000.00)). to eq "08/03/2021, 1000.00"
+    end
+
+    it 'adds the deposit amount to a positive current balance of a bank account' do
+      account = BankAccount.new
+      account.deposit("08/03/2021", 1000.00)
+      account.deposit("09/03/2021", 500.00)
+      expect(account.current_balance).to eq 1500.0
     end
   end
 
