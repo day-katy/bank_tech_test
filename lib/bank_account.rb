@@ -18,4 +18,8 @@ class BankAccount
     "#{date}, #{sprintf("%.2f", @current_balance)}"
   end
 
+  def withdrawal (date, withdrawal_amount)
+    @current_balance -= withdrawal_amount
+  end
+
 end
