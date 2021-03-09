@@ -2,11 +2,10 @@
 require_relative 'transactions'
 # This code runs a bank statement in IRB
 class BankAccount
-  attr_accessor :current_balance, :acc_statement
+  attr_reader :current_balance, :acc_statement
 
-  def initialize(current_balance = 0)
-    @current_balance = current_balance
-    @acc_statement = []
+  def initialize(acc_statement = Transactions.new.acc_statement)
+    @acc_statement = acc_statement
   end
 
   def print_statement

@@ -9,6 +9,9 @@
           null,
           1,
           1,
+          1,
+          null,
+          1,
           5,
           null,
           null,
@@ -25,9 +28,9 @@
           1,
           1,
           1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
           null,
           null,
           null,
@@ -35,13 +38,13 @@
           null,
           1,
           1,
-          1,
+          0,
           null,
           null,
           1,
           1,
-          1,
-          1,
+          0,
+          0,
           null,
           null,
           null,
@@ -51,7 +54,7 @@
       "/Users/katy/Desktop/Makers_Academy/Week_10/bank_tech_test/lib/bank_account.rb": {
         "lines": [
           null,
-          null,
+          1,
           null,
           1,
           1,
@@ -62,17 +65,33 @@
           null,
           null,
           1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/katy/Desktop/Makers_Academy/Week_10/bank_tech_test/lib/transactions.rb": {
+        "lines": [
           1,
           null,
+          1,
+          1,
           null,
           1,
-          4,
-          4,
+          10,
+          10,
           null,
           null,
           1,
-          2,
-          2,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
           null,
           null
         ]
@@ -84,6 +103,18 @@
           1,
           null,
           1,
+          6,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
           1,
           1,
           1,
@@ -103,19 +134,11 @@
           0,
           0,
           null,
-          null,
-          null
-        ]
-      },
-      "/Users/katy/Desktop/Makers_Academy/Week_10/bank_tech_test/lib/transactions.rb": {
-        "lines": [
-          null,
-          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1615286363
+    "timestamp": 1615287720
   }
 }

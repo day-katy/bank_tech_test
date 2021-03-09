@@ -3,22 +3,28 @@
 require 'bank_account'
 
 describe BankAccount do
+  let(:deposit) { double }
+  let(:withdrawal) { double }
+  let(:current_balance) { double }
+  let(:acc_statement) { double }
+  
   before(:each) do
     @account = BankAccount.new
   end
 
   describe '#initialize' do
     it 'starts with an initial current balance of 0' do
-      expect(@account.current_balance).to eq 0
+      expect(@account.current_balance).to eq current_balance
     end
 
     it 'starts with an empty array for the accumulated statement' do
-      expect(@account.acc_statement).to eq []
+      expect(@account.acc_statement).to eq acc_statement
     end
   end
 
   describe '#print_statement' do
     it 'prints the date, credit, debit, and balance of a bank statement' do
+      allow
       @account.deposit('10/01/2012', 1000)
       @account.deposit('13/01/2012', 2000)
       @account.withdrawal('14/01/2012', 500)
