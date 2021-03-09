@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+require_relative 'transactions'
 # This code runs a bank statement in IRB
 class BankAccount
   attr_accessor :current_balance, :acc_statement
@@ -13,13 +13,4 @@ class BankAccount
     @acc_statement.reverse.unshift('date || credit || debit || balance')
   end
 
-  def deposit(date, deposit_amount)
-    @current_balance += deposit_amount
-    @acc_statement << "#{date} || #{format('%.2f', deposit_amount)} || || #{format('%.2f', @current_balance)}"
-  end
-
-  def withdrawal(date, withdrawal_amount)
-    @current_balance -= withdrawal_amount
-    @acc_statement << "#{date} || || #{format('%.2f', withdrawal_amount)} || #{format('%.2f', @current_balance)}"
-  end
 end

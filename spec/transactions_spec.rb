@@ -3,6 +3,8 @@
 require 'transactions'
 
 describe Transactions do
+  let(:account) {double}
+
   describe '#deposit' do
     it 'adds the amount of the deposit to an empty bank account' do
       @account.deposit('08/03/2021', 1000.00)
