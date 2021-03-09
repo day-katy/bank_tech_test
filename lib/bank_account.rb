@@ -9,10 +9,6 @@ class BankAccount
     @acc_statement = []
   end
 
-  def print_statement
-    @acc_statement.reverse.unshift('date || credit || debit || balance')
-  end
-
   def deposit(date, deposit_amount)
     @current_balance += deposit_amount
     @acc_statement << "#{date} || #{format('%.2f', deposit_amount)} || || #{format('%.2f', @current_balance)}"
