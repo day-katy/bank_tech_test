@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require_relative 'bank_account'
 
+# This code is a bank statement
 class Statement
   attr_accessor :acc_statement
 
@@ -11,5 +14,4 @@ class Statement
     puts @acc_statement.reverse.unshift('date || credit || debit || balance')
     @acc_statement.reverse.unshift('date || credit || debit || balance')
   end
-
 end

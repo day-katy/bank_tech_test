@@ -9,7 +9,6 @@ class BankAccount
   def initialize(current_balance = 0, statement = Statement.new)
     @current_balance = current_balance
     @statement = statement
-
   end
 
   def deposit(date, amount)
@@ -21,6 +20,4 @@ class BankAccount
     @current_balance -= amount
     @statement.acc_statement << "#{date} || || #{format('%.2f', amount)} || #{format('%.2f', @current_balance)}"
   end
-
 end
-
