@@ -8,12 +8,16 @@ describe BankAccount do
   end
 
   describe '#initialize' do
+  let(:statement) {double}
+  subject { BankAccount.new(statement)}
+
     it 'starts with an initial current balance of 0' do
       expect(@account.current_balance).to eq 0
     end
 
     it 'starts with an empty array for the accumulated statement' do
-      expect(@account.acc_statement).to eq []
+      
+      expect(subject.statement).to eq statement
     end
   end
 
