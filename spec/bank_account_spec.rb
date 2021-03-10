@@ -3,6 +3,7 @@
 require 'bank_account'
 
 describe BankAccount do
+  
   before(:each) do
     @account = BankAccount.new
   end
@@ -12,11 +13,10 @@ describe BankAccount do
   subject { BankAccount.new(statement)}
 
     it 'starts with an initial current balance of 0' do
-      expect(@account.current_balance).to eq 0
+      expect(@account.current_balance).to eq current_balance
     end
 
-    it 'starts with an empty array for the accumulated statement' do
-      
+    it 'starts with an empty array for the accumulated statement' do 
       expect(subject.statement).to eq statement
     end
   end
