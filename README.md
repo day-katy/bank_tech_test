@@ -14,23 +14,22 @@ An example of what this code looks like in IRB:
 ```
 ➜  bank_tech_test git:(main) ✗ irb -r './lib/bank_account.rb'
 3.0.0 :001 > account = BankAccount.new
- => #<BankAccount:0x00007fe5ab1f9d00 @current_balance=0, @acc_statement=[]>
+ => #<BankAccount:0x00007fde9fb1f0f0 @current_balance=0, @statement=#<Statement:0x00007fde9fb1f0a0 @acc_statement=[]>>
 3.0.0 :002 > account.deposit("08/03/2021", 1000)
  => ["08/03/2021 || 1000.00 || || 1000.00"]
 3.0.0 :003 > account.deposit("09/03/2021", 400)
  => ["08/03/2021 || 1000.00 || || 1000.00", "09/03/2021 || 400.00 || || 1400.00"]
-3.0.0 :004 > account.withdrawal("10/03/2021", 500)
- => ["08/03/2021 || 1000.00 || || 1000.00", "09/03/2021 || 400.00 || || 1400.00", "10/03/2021 || || 500.00 || 900.00"]
-3.0.0 :005 > account.print_statement
- => ["date || credit || debit || balance", "10/03/2021 || || 500.00 || 900.00", "09/03/2021 || 400.00 || || 1400.00", "08/03/2021 || 1000.00 || || 1000.00"]
-3.0.0 :006 > puts account.print_statement
+3.0.0 :004 > account.withdrawal("10/03/2021", 250)
+ => ["08/03/2021 || 1000.00 || || 1000.00", "09/03/2021 || 400.00 || || 1400.00", "10/03/2021 || || 250.00 || 1150.00"]
+3.0.0 :005 > account.statement.print_statement
 date || credit || debit || balance
-10/03/2021 || || 500.00 || 900.00
+10/03/2021 || || 250.00 || 1150.00
 09/03/2021 || 400.00 || || 1400.00
 08/03/2021 || 1000.00 || || 1000.00
+ => ["date || credit || debit || balance", "10/03/2021 || || 250.00 || 1150.00", "09/03/2021 || 400.00 || || 1400.00", "08/03/2021 || 1000.00 || || 1000.00"]
 ```
 
-![Image](https://github.com/day-katy/bank_tech_test/blob/main/images/bank_tech_test.png?raw=true)
+![Image](https://github.com/day-katy/bank_tech_test/blob/main/images/bank_tech_test_example.png?raw=true)
 
 To run the tests, run `rspec`
 
