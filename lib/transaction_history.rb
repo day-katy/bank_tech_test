@@ -1,9 +1,8 @@
 class TransactionHistory 
 attr_accessor :transaction_history, :statement
 
-def initialize(statement = Statement.new)
+def initialize
   @transaction_history = []
-  @statement = statement
 end
 
 def add_transaction(date, amount, current_balance)

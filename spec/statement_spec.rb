@@ -11,8 +11,12 @@ describe Statement do
   end
 
   describe "add_to_statement" do
-    it "adds formatted transaction history to statement" do 
-      expect(subject.add_to_statement("10/03/2021", 100, 100)).to eq [ '10/03/2021 || || 500.00 || 500.00']
+    it "adds formatted deposit history to statement" do 
+      expect(subject.add_to_statement("10/03/2021", 100, 100)).to eq [ '10/03/2021 || 100.00 || || 100.00']
+    end
+
+    it "adds formatted withdrawal history to statement" do
+      expect(subject.add_to_statement("11/03/2021", -100, 0)).to eq ['11/03/2021 || || 100.00 || 0.00']
     end
   end
 

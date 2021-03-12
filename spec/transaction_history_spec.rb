@@ -9,7 +9,7 @@ describe TransactionHistory do
 
   describe "#add_transaction" do 
     it "returns the transaction history " do
-      expect(subject.add_transaction("10/03/2021", 500, 500)).to eq ["10/03/2021", 500, 500]
+      expect(subject.add_transaction("10/03/2021", 500, 500)).to eq [["10/03/2021", 500, 500]]
     end
   end
 
