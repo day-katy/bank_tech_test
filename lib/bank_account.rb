@@ -19,10 +19,10 @@ class BankAccount
     @statement.add_to_statement(date, amount, @current_balance)
   end
 
-  def withdrawal(date, amount)
+  def withdraw(date, amount)
     @current_balance -= amount
     @transaction_history.add_transaction(date, -amount, @current_balance)
-    @statement.add_to_statement(date, amount, @current_balance)
+    @statement.add_to_statement(date, -amount, @current_balance)
   end
 
 end
