@@ -3,26 +3,25 @@
 require 'statement'
 
 describe Statement do
-
   describe '#inititialize' do
     it 'begins with an empty array' do
       expect(subject.statement).to eq []
     end
   end
 
-  describe "add_to_statement" do
-    it "adds formatted deposit history to statement" do 
-      expect(subject.add_to_statement("10/03/2021", 100, 100)).to eq [ '10/03/2021 || 100.00 || || 100.00']
+  describe 'add_to_statement' do
+    it 'adds formatted deposit history to statement' do
+      expect(subject.add_to_statement('10/03/2021', 100, 100)).to eq ['10/03/2021 || 100.00 || || 100.00']
     end
 
-    it "adds formatted withdrawal history to statement" do
-      expect(subject.add_to_statement("11/03/2021", -100, 0)).to eq ['11/03/2021 || || 100.00 || 0.00']
+    it 'adds formatted withdrawal history to statement' do
+      expect(subject.add_to_statement('11/03/2021', -100, 0)).to eq ['11/03/2021 || || 100.00 || 0.00']
     end
   end
 
-  describe "#format_currency" do 
-    it "formats the currency correctly" do 
-      expect(subject.format_currency(100)).to eq "100.00"
+  describe '#format_currency' do
+    it 'formats the currency correctly' do
+      expect(subject.format_currency(100)).to eq '100.00'
     end
   end
 
@@ -31,7 +30,6 @@ describe Statement do
       expect(subject.print_statement).to eq ['date || credit || debit || balance']
     end
   end
-
 
   # describe '#statement' do
   #   it 'has the date, credit/debit, and balance of a bank statement' do
@@ -58,6 +56,4 @@ describe Statement do
   #                                                       '08/03/2021 || 1000.00 || || 1000.00']
   #   end
   # end
-
-
 end

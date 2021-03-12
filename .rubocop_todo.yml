@@ -9,5 +9,6 @@
 # Offense count: 1
 # Configuration parameters: CountComments, CountAsOne, ExcludedMethods, IgnoredMethods.
 # IgnoredMethods: refine
-Metrics/BlockLength:
-  Max: 70
+
+# Layout/LineLength:
+#   Max: 500

@@ -44,5 +44,4 @@ describe BankAccount do
       expect(@account.current_balance).to eq 500.0
     end
   end
-
 end

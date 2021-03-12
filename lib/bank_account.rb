@@ -24,5 +24,4 @@ class BankAccount
     @transaction_history.add_transaction(date, -amount, @current_balance)
     @statement.add_to_statement(date, -amount, @current_balance)
   end
-
 end
