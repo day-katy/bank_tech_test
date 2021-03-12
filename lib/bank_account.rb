@@ -16,17 +16,13 @@ class BankAccount
   def deposit(date, amount)
     @current_balance += amount
     @transaction_history.add_transaction(date, amount, @current_balance)
-    @statement.acc_statement << "#{date} || #{format_currency(amount)} || || #{format_currency(@current_balance)}"
+    @statement.add_to_statement(date, amount, @current_balance)
   end
 
   def withdrawal(date, amount)
     @current_balance -= amount
     @transaction_history.add_transaction(date, -amount, @current_balance)
-    @statement.acc_statement << "#{date} || || #{format_currency(amount)} || #{format_currency(@current_balance)}"
-  end
-
-  def format_currency(amount)
-    format('%.2f', amount)
+    @statement.add_to_statement(date, amount, @current_balance)
   end
 
 end

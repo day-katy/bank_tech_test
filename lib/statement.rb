@@ -5,10 +5,14 @@ require_relative 'transaction_history'
 
 # This code is a bank statement
 class Statement
-  attr_accessor :acc_statement
+  attr_accessor :statement
 
   def initialize
-    @acc_statement = []
+    @statement = []
+  end
+
+  def add_to_statement(date, amount, current_balance)
+    @statement << "#{date} || || #{format_currency(amount)} || #{format_currency(current_balance)}"
   end
 
   def format_currency(amount)
@@ -16,8 +20,8 @@ class Statement
   end
 
   def print_statement
-    puts @acc_statement.reverse.unshift('date || credit || debit || balance')
-    @acc_statement.reverse.unshift('date || credit || debit || balance')
+    puts @statement.reverse.unshift('date || credit || debit || balance')
+    @statement.reverse.unshift('date || credit || debit || balance')
   end
 
 end
