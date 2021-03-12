@@ -7,8 +7,12 @@ require_relative 'transaction_history'
 class Statement
   attr_accessor :acc_statement
 
-  def initialize(acc_statement = TransactionHistory.new)
-    @acc_statement = acc_statement
+  def initialize
+    @acc_statement = []
+  end
+
+  def format_currency(amount)
+    format('%.2f', amount)
   end
 
   def print_statement

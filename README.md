@@ -123,6 +123,14 @@ In planning this project, I discerned that I would need:
 
 Using TDD as my guide, I approached this code as if I were trying to keep track of real-life finances. I would want to input the date and the amount of a deposit or withdrawal, and then when printing my statement I would want to know the dates of specific deposits and withdrawals, along with my overall balance. After testing and refactoring, I now have code that accomplishes the MVP of the specification, though not yet the edge cases.
 
+### Further Planning
+
+I decided to extract my code into three classes: BankAccount, Statement, and TransactionHistory. I decided I would need:
+
+- a way for the transaction data to be stored in a TransactionHistory object
+- for that TransactionHistory object to talk to Statement, so it could be printed and formatted correctly
+- for BankAccount to handle the depositing and withdrawing (maybe renaming it as Transaction?)
+
 ## Edge Cases
 
 What happens when a bank account goes below 0? Is there an overdraft limit?

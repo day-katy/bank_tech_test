@@ -12,7 +12,7 @@ describe BankAccount do
     subject { BankAccount.new(statement) }
 
     it 'starts with an initial current balance of 0' do
-      expect(@account.current_balance).to eq current_balance
+      expect(@account.current_balance).to eq 0
     end
 
     it 'starts with an empty array for the accumulated statement' do
@@ -66,4 +66,11 @@ describe BankAccount do
                                                         '08/03/2021 || 1000.00 || || 1000.00']
     end
   end
+
+  describe "#format_currency" do 
+    it "formats the currency correctly" do 
+      expect(subject.format_currency(100)).to eq "100.00"
+    end
+  end
+
 end
