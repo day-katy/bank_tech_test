@@ -3,9 +3,11 @@
 require 'statement'
 
 describe Statement do
+let(:transaction_history) {double}
+
   describe '#inititialize' do
     it 'begins with an empty array' do
-      expect(subject.acc_statement).to eq []
+      expect(subject.acc_statement).to eq transaction_history
     end
   end
 
