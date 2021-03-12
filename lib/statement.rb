@@ -12,7 +12,7 @@ class Statement
   end
 
   def add_to_statement(date, amount, current_balance)
-    @statement << (positive?(amount) ? "#{date} || #{format_currency(amount)} || || #{format_currency(current_balance)}" : "#{date} || || #{format_currency(-amount)} || #{format_currency(current_balance)}")
+    @statement << (amount.positive? ? "#{date} || #{format_currency(amount)} || || #{format_currency(current_balance)}" : "#{date} || || #{format_currency(-amount)} || #{format_currency(current_balance)}")
   end
 
   def format_currency(amount)
@@ -24,9 +24,4 @@ class Statement
     @statement.reverse.unshift('date || credit || debit || balance')
   end
 
-  private
-
-  def positive?(amount)
-    return true if amount.positive?
-  end
 end
